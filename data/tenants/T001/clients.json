@@ -1,0 +1,9 @@
+{
+  "C1001": {
+    "id": "C1001",
+    "name": "Olivier Roy",
+    "phone": "514-555-3002",
+    "email": "olivier@example.com",
+    "status": "active"
+  }
+}

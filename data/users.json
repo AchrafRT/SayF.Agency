@@ -1,0 +1,50 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "admin",
+    "role": "owner",
+    "client_id": null
+  },
+  "SayFAgency": {
+    "username": "SayFAgency",
+    "password": "admin",
+    "role": "tenant",
+    "tenant_id": "T000"
+  },
+  "DemenageursPlus": {
+    "username": "DemenageursPlus",
+    "password": "admin",
+    "role": "tenant",
+    "tenant_id": "T001"
+  },
+  "users": [
+    {
+      "username": "admin",
+      "password_hash": "pbkdf2_sha256$120000$0a6d9ad2620df8dac1126135867847ba$e2e8fd649ae9fb49baa407421ab8b34649e1d1ee67c436305c66bf522f20a4e3",
+      "role": "owner",
+      "tenant_id": null,
+      "display_name": "SayF.Agency Admin"
+    },
+    {
+      "username": "DemenageursPlus",
+      "password_hash": "pbkdf2_sha256$120000$683613fd7accd381cfc5c361ea0c4b56$d0c406351903fc9dc0b032f59a3c7d9f41776b2c15f5ef88c4b1f01689f9a2d2",
+      "role": "client_owner",
+      "tenant_id": "T001",
+      "display_name": "DemenageursPlus Owner"
+    },
+    {
+      "username": "SayFAgency",
+      "password_hash": "pbkdf2_sha256$120000$121794e504c09d868f877ebdc1f0e734$cc9e3d73a59d3298a90e3a370be3191e7b966de415ed15beadbbc23474ecabe1",
+      "role": "client_owner",
+      "tenant_id": "T000",
+      "display_name": "SayF.Agency (Tenant Portal)"
+    },
+    {
+      "username": "PlomberieNova",
+      "password_hash": "pbkdf2_sha256$120000$9bf0f14bc306a70c27efba49c440f28d$e07b3066d0877a4abe1330f797d240a574226380e8853bfa2557c43512b9d22f",
+      "role": "client_owner",
+      "tenant_id": "T002",
+      "display_name": "PlomberieNova Owner"
+    }
+  ]
+}

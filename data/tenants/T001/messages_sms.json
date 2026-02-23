@@ -1,0 +1,11 @@
+{
+  "messages": [
+    {
+      "id": "SM10",
+      "client_id": "C1001",
+      "body": "Move booked Feb 17 08:00. Deposit received.",
+      "direction": "out",
+      "ts": "2026-02-15T11:00:00"
+    }
+  ]
+}

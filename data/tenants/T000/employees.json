@@ -1,0 +1,24 @@
+{
+  "EMP0001": {
+    "id": "EMP0001",
+    "created_at": "2026-02-15T00:00:00Z",
+    "status": "active",
+    "name": "Nadia",
+    "role": "sales",
+    "phone": "514-555-0201",
+    "email": "nadia@sayf.agency",
+    "hourly_rate": 0.0,
+    "notes": "Handles lead follow-ups + bookings."
+  },
+  "EMP0002": {
+    "id": "EMP0002",
+    "created_at": "2026-02-15T00:00:00Z",
+    "status": "active",
+    "name": "Omar",
+    "role": "support",
+    "phone": "514-555-0202",
+    "email": "omar@sayf.agency",
+    "hourly_rate": 0.0,
+    "notes": "Client onboarding + renewals."
+  }
+}

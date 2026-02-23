@@ -1,0 +1,12 @@
+{
+  "templates": {
+    "quote_email": "Hello {{client_name}},\n\nHere is your quote total: ${{quote_total}}.\n\nThanks,\n{{company_name}}",
+    "quote_sms_notify": "Hi {{client_name}} — your quote is ready: ${{quote_total}}. Reply YES for booking link.",
+    "booking_sms": "Booking link: {{booking_link}} (deposit ${{deposit}}).",
+    "booking_confirm_email": "Confirmed! Your booking is scheduled for {{job_date}} {{job_time}}.\n\n{{company_name}}",
+    "invoice_sms": "Invoice: Total ${{invoice_total}}. Deposit ${{deposit}}. Balance ${{balance}}. Pay: {{payment_link}}",
+    "invoice_email": "Hello {{client_name}},\n\nInvoice summary:\nTotal: ${{invoice_total}}\nDeposit: ${{deposit}}\nBalance: ${{balance}}\n\nPay here: {{payment_link}}\n\n{{company_name}}",
+    "tenant_onboarding_email": "Welcome {{tenant_name}}!\n\nPortal: {{portal_link}}\nLogin: {{tenant_username}}\nPassword: {{tenant_password}}\n\nEmbed this form on your site:\n{{embed_code}}\n\n— SayF.Agency",
+    "tenant_onboarding_sms": "Your portal is ready: {{portal_link}} (user: {{tenant_username}} / pass: {{tenant_password}})."
+  }
+}

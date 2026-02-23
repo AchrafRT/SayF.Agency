@@ -1,0 +1,14 @@
+{
+  "T0001": {
+    "id": "T0001",
+    "created_at": "2026-02-17T20:54:58",
+    "make": "Hino",
+    "model": "20ft Cube Truck",
+    "year": "2010",
+    "consumption_per_100km": 22.0,
+    "gas_price_assumption": 2.0,
+    "insurance_payment_date": "2026-02-25",
+    "loan_payment_date": "2026-02-05",
+    "notes": "Main workhorse. Keep tires checked."
+  }
+}

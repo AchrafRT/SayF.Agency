@@ -1,0 +1,16 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Clients</h2>
+              <div class="muted">Agency onboarding: each client is a tenant.</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/admin?tenant={urllib.parse.quote(sel)}&tab=clients&modal=new_tenant">New Tenant</a>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <table class="table">
+            <thead><tr><th>Tenant</th><th>Name</th><th class="right">Portal</th></tr></thead>
+            <tbody>{rows or "<tr><td colspan='3' class='muted'>No tenants.</td></tr>"}</tbody>
+          </table>
+        </div>

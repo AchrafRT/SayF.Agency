@@ -1,0 +1,14 @@
+{
+  "C0001": {
+    "id": "C0001",
+    "created_at": "2026-02-17T20:54:58",
+    "name": "Sophie Nguyen",
+    "phone": "514-555-0111",
+    "email": "sophie@example.com",
+    "address": "Rosemont, Montreal",
+    "tags": [
+      "vip"
+    ],
+    "notes": "Prefers SMS. Repeat customer."
+  }
+}

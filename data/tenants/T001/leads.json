@@ -1,0 +1,20 @@
+{
+  "L1001": {
+    "id": "L1001",
+    "name": "Olivier Roy",
+    "phone": "514-555-3002",
+    "email": "olivier@example.com",
+    "move_date": "2026-02-17",
+    "value_est": 1140,
+    "status": "won"
+  },
+  "L1002": {
+    "id": "L1002",
+    "name": "Marie Tremblay",
+    "phone": "514-555-3001",
+    "email": "marie@example.com",
+    "move_date": "2026-02-20",
+    "value_est": 1200,
+    "status": "new"
+  }
+}

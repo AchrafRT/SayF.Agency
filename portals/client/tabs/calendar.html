@@ -1,0 +1,13 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Calendar</h2>
+              <div class="muted">Day / week / month / year (server-rendered, no JS).</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/client?tenant={urllib.parse.quote(tid)}&tab=calendar&modal=new_event&cal_view={urllib.parse.quote(cal_view)}&cal_date={urllib.parse.quote(cal_date)}">New Event</a>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          {{cal_html}}
+        </div>

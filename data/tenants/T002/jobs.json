@@ -1,0 +1,18 @@
+{
+  "J0001": {
+    "id": "J0001",
+    "client_id": "C0001",
+    "created_at": "2026-02-17T20:54:58",
+    "status": "scheduled",
+    "from_address": "Rosemont, Montreal",
+    "to_address": "Ahuntsic, Montreal",
+    "move_date": "2026-02-17",
+    "price": 1450.0,
+    "truck_id": "T0001",
+    "employee_ids": [
+      "EMP0001",
+      "EMP0002"
+    ],
+    "notes": "2 bedrooms. Disassembly bed + couch."
+  }
+}

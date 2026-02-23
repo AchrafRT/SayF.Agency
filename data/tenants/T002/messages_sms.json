@@ -1,0 +1,22 @@
+{
+  "threads": {
+    "C0001": [
+      {
+        "id": "MS1",
+        "ts": "2026-02-17T20:54:58",
+        "direction": "out",
+        "client_id": "C0001",
+        "subject": "",
+        "body": "Hi Sophie — your quote is ready. Want me to send the booking link?"
+      },
+      {
+        "id": "MS2",
+        "ts": "2026-02-17T20:54:58",
+        "direction": "in",
+        "client_id": "C0001",
+        "subject": "",
+        "body": "Yes please 👍"
+      }
+    ]
+  }
+}

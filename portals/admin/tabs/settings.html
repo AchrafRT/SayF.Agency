@@ -1,0 +1,15 @@
+<div class='card'>
+        <h2>Settings</h2>
+        <div class='muted'>Theme, language, and admin password.</div>
+        <div class='spacer'></div>
+
+        <h3>Preferences</h3>
+        <div class='row wrap'>
+        <a class='btn btn-ghost' href='{html.escape(toggle_theme_url)}'>{html.escape(toggle_theme_label)}</a>
+        <a class='btn btn-ghost' href='{html.escape(toggle_lang_url)}'>{html.escape(toggle_lang_label)}</a>
+        </div>
+
+        <div class='spacer'></div>
+        <h3>Change Password</h3>
+        {{pwd_form}}
+        </div>

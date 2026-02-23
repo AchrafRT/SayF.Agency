@@ -1,0 +1,15 @@
+{
+  "E1001": {
+    "id": "E1001",
+    "date": "2026-02-17",
+    "time": "08:00",
+    "type": "job",
+    "title": "Move \u2014 Olivier Roy",
+    "desc": "Deposit collected $299",
+    "related": {
+      "client_id": "C1001",
+      "job_id": "J1001"
+    },
+    "completed": false
+  }
+}

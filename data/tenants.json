@@ -1,0 +1,12 @@
+[
+  {
+    "tenant_id": "T000",
+    "name": "SayF.Agency",
+    "category": "agency"
+  },
+  {
+    "tenant_id": "T001",
+    "name": "DemenageursPlus",
+    "category": "moving"
+  }
+]

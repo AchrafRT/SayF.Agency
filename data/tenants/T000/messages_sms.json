@@ -1,0 +1,11 @@
+{
+  "messages": [
+    {
+      "id": "SM1",
+      "client_id": "C0001",
+      "body": "Onboarding confirmed Feb 18 14:00.",
+      "direction": "out",
+      "ts": "2026-02-15T10:01:00"
+    }
+  ]
+}

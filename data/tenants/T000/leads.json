@@ -1,0 +1,20 @@
+{
+  "L0001": {
+    "id": "L0001",
+    "name": "Centre Hypoth\u00e9caire Bor\u00e9al",
+    "phone": "450-555-0202",
+    "email": "contact@chb.ca",
+    "move_date": "2026-02-16",
+    "value_est": 99,
+    "status": "booked"
+  },
+  "L0002": {
+    "id": "L0002",
+    "name": "Armoires PMM",
+    "phone": "438-555-0303",
+    "email": "info@armoirespmm.ca",
+    "move_date": "2026-02-22",
+    "value_est": 981,
+    "status": "proposal"
+  }
+}

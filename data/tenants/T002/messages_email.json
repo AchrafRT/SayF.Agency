@@ -1,0 +1,22 @@
+{
+  "threads": {
+    "C0001": [
+      {
+        "id": "ME1",
+        "ts": "2026-02-17T20:54:58",
+        "direction": "in",
+        "client_id": "C0001",
+        "subject": "Question about pricing",
+        "body": "Hi, can you confirm the quote includes packing?"
+      },
+      {
+        "id": "ME2",
+        "ts": "2026-02-17T20:54:58",
+        "direction": "out",
+        "client_id": "C0001",
+        "subject": "Re: Question about pricing",
+        "body": "Yes — packing is included as an optional line item. We can adjust based on your needs."
+      }
+    ]
+  }
+}

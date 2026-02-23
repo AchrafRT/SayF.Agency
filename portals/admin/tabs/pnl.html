@@ -1,0 +1,21 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Real‑Time P&amp;L</h2>
+              <div class="muted">Tenant‑level financial snapshot.</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/admin?tenant={urllib.parse.quote(sel)}&tab=pnl&modal=new_pnl">Add Entry</a>
+            </div>
+          </div>
+          <div class="kpis kpis-3">
+            <div class="kpi"><div class="kpi-num">${revenue:,.2f}</div><div class="kpi-label">Revenue</div></div>
+            <div class="kpi"><div class="kpi-num">${expense:,.2f}</div><div class="kpi-label">Expenses</div></div>
+            <div class="kpi"><div class="kpi-num">${profit:,.2f}</div><div class="kpi-label">Profit</div></div>
+          </div>
+          <div class="spacer"></div>
+          <table class="table">
+            <thead><tr><th>Date</th><th>Note</th><th class="right">Amount</th></tr></thead>
+            <tbody>{{entries}}</tbody>
+          </table>
+        </div>

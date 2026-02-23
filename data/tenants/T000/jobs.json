@@ -1,0 +1,11 @@
+{
+  "J0001": {
+    "id": "J0001",
+    "client_id": "C0001",
+    "title": "Onboarding setup",
+    "date": "2026-02-18",
+    "time": "14:00",
+    "status": "scheduled",
+    "event_id": "E0002"
+  }
+}

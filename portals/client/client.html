@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="{{lang}}" data-theme="{{theme}}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{app_name}} — Client</title>
+  <style>
+:root{
+  --bg:#0b0f17;
+  --panel:#111827;
+  --panel2:#0f172a;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --line:#223047;
+  --brand:#4ade80;
+  --brand2:#22c55e;
+  --danger:#f87171;
+  --shadow: 0 8px 24px rgba(0,0,0,.35);
+  --cardbg: rgba(15,23,42,.65);
+  --cardbg2: rgba(15,23,42,.55);
+  --inputbg: rgba(3,7,18,.55);
+  --radius:16px;
+  --radius2:20px;
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+html[data-theme="light"]{
+  --bg:#f4fbf7;
+  --panel:#ffffff;
+  --panel2:#f1faf4;
+  --text:#0b1220;
+  --muted:#4b5563;
+  --line:#d5e7dc;
+  /* darker green for better contrast */
+  --brand:#0f7a33;
+  --brand2:#0b5f28;
+  --danger:#dc2626;
+  --shadow: 0 10px 28px rgba(2,6,23,.08);
+  --cardbg: rgba(255,255,255,.92);
+  --cardbg2: rgba(241,250,244,.95);
+  --inputbg: rgba(241,250,244,.95);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--font);
+  background: radial-gradient(1000px 700px at 20% 10%, rgba(34,197,94,.10), transparent 60%),
+              radial-gradient(900px 600px at 80% 30%, rgba(59,130,246,.08), transparent 60%),
+              var(--bg);
+  color:var(--text);
+}
+a{color:inherit; text-decoration:none}
+.container{max-width:1200px; margin:0 auto; padding:20px}
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 18px;
+  background: linear-gradient(180deg, rgba(17,24,39,.92), rgba(17,24,39,.75));
+  border:1px solid var(--line); border-radius:var(--radius2); box-shadow:var(--shadow);
+}
+.brand{display:flex; align-items:center; gap:10px}
+.logo-img{width:34px; height:34px; border-radius:12px; display:block; box-shadow: 0 6px 18px rgba(22,163,74,.20)}
+.brand h1{font-size:16px; margin:0; letter-spacing:.2px}
+.pill{display:inline-block; padding:5px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(15,23,42,.7); font-size:12px}
+.small{font-size:12px}
+.muted{color:var(--muted)}
+.row{display:flex; align-items:center; gap:12px}
+.row.wrap{flex-wrap:wrap}
+.row.between{justify-content:space-between}
+.spacer{height:16px}
+.grid{display:grid; grid-template-columns: 260px 1fr; gap:18px; margin-top:18px}
+.sidebar{
+  background: rgba(17,24,39,.85);
+  border:1px solid var(--line); border-radius:var(--radius2); box-shadow:var(--shadow);
+  padding:12px;
+}
+.nav a{display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:12px; margin:2px 0;
+  color:var(--text); border:1px solid transparent;
+}
+.nav a.active{background:rgba(74,222,128,.12); border-color:rgba(74,222,128,.25)}
+.nav a:hover{background:rgba(255,255,255,.04)}
+.main{
+  background: rgba(17,24,39,.85);
+  border:1px solid var(--line); border-radius:var(--radius2); box-shadow:var(--shadow);
+  padding:16px;
+}
+.card{
+  background: var(--cardbg);
+  border:1px solid var(--line);
+  border-radius:var(--radius2);
+  padding:16px;
+}
+
+/* Better structure for modals + tabs */
+.section-head{display:flex; align-items:flex-start; justify-content:space-between; gap:14px; flex-wrap:wrap}
+.title-lg{font-size:18px; font-weight:900; letter-spacing:.2px}
+.tabs{display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+.tab{display:inline-flex; align-items:center; justify-content:center; padding:8px 10px; border-radius:999px; border:1px solid var(--line); background: rgba(255,255,255,.04); font-size:12px}
+.tab.active{border-color: rgba(74,222,128,.35); background: rgba(74,222,128,.12)}
+html[data-theme="light"] .tab{background: rgba(2,6,23,.02)}
+html[data-theme="light"] .tab.active{border-color: rgba(15,122,51,.35); background: rgba(15,122,51,.10)}
+
+/* Calendar clarity */
+.cal th,.cal td{vertical-align:top}
+.cal td{padding:10px}
+.cal .cal-item{border:1px solid var(--line); border-radius:14px; padding:10px; margin:8px 0; background: rgba(255,255,255,.03)}
+.cal .cal-item.done{opacity:.75}
+.cal .cal-item.done .title{text-decoration:line-through}
+.cal .cal-item .title{font-weight:800}
+.cal .cal-item a{color:inherit; text-decoration:none}
+.cal-month td{min-height:120px}
+.cal-month .daynum{font-weight:900; font-size:12px; color:var(--muted)}
+.cal-month .today{outline:2px solid rgba(74,222,128,.22); outline-offset:-2px; border-radius:16px}
+
+@media (max-width: 980px){
+  .grid{grid-template-columns:1fr}
+  .kpis-5{grid-template-columns: repeat(2, minmax(0, 1fr))}
+}
+.card.mini{padding:12px}
+h2{margin:0 0 4px 0; font-size:18px}
+h3{margin:18px 0 8px 0; font-size:14px; color:var(--muted); letter-spacing:.2px; text-transform:uppercase}
+.kpis{display:grid; gap:12px; margin-top:14px}
+.kpis-5{grid-template-columns: repeat(5, minmax(0, 1fr))}
+.kpis-3{grid-template-columns: repeat(3, minmax(0, 1fr))}
+.kpi{
+  background: var(--cardbg2);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:14px;
+}
+.kpi-num{font-size:22px; font-weight:800; letter-spacing:.2px}
+.kpi-label{font-size:12px; color:var(--muted); margin-top:6px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px; border-radius:14px;
+  border:1px solid rgba(74,222,128,.35);
+  background: rgba(74,222,128,.16);
+  color: var(--text);
+  font-weight:700;
+  cursor:pointer;
+}
+html[data-theme="light"] .btn{color: #052e16; border-color: rgba(22,163,74,.38); background: rgba(22,163,74,.14)}
+html[data-theme="light"] .btn:hover{background: rgba(22,163,74,.20)}
+html[data-theme="light"] .btn-ghost{color:#0b1220; background: rgba(2,6,23,.03)}
+html[data-theme="light"] .btn-ghost:hover{background: rgba(2,6,23,.06)}
+html[data-theme="light"] .nav a:hover{background: rgba(2,6,23,.04)}
+html[data-theme="light"] .pill{background: rgba(241,250,244,.95)}
+html[data-theme="light"] .topbar, html[data-theme="light"] .sidebar, html[data-theme="light"] .main, html[data-theme="light"] .modal-card{background: rgba(255,255,255,.92)}
+
+.btn:hover{background: rgba(74,222,128,.22)}
+.btn-ghost{
+  border-color: var(--line);
+  background: rgba(255,255,255,.03);
+  font-weight:600;
+}
+.btn-ghost:hover{background: rgba(255,255,255,.06)}
+.btn.danger, .btn-ghost.danger{border-color: rgba(248,113,113,.35)}
+.btn-ghost.danger{color: #fecaca}
+.table{width:100%; border-collapse:separate; border-spacing:0 10px}
+.table th{font-size:12px; text-align:left; color:var(--muted); font-weight:700; padding:0 10px}
+.table td{
+  padding:12px 10px;
+  background: var(--cardbg2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.table tr td:first-child{border-left:1px solid var(--line); border-top-left-radius:14px; border-bottom-left-radius:14px}
+.table tr td:last-child{border-right:1px solid var(--line); border-top-right-radius:14px; border-bottom-right-radius:14px}
+/* Calendar clarity */
+.table.cal{border-spacing:0; border-collapse:separate}
+.table.cal th{padding:10px; background: rgba(255,255,255,.02); border-bottom:1px solid var(--line)}
+html[data-theme="light"] .table.cal th{background: rgba(2,6,23,.03)}
+.table.cal td{padding:10px; border-right:1px solid var(--line)}
+.table.cal tr td:last-child{border-right:1px solid var(--line)}
+.table.cal-month td{height:120px; vertical-align:top}
+.table.cal-month td .daynum{display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:999px; border:1px solid var(--line); background: rgba(74,222,128,.10); font-weight:800; font-size:12px}
+html[data-theme="light"] .table.cal-month td .daynum{background: rgba(22,163,74,.12)}
+.table.cal .cal-item{margin-top:8px; padding:8px 10px; border:1px solid var(--line); border-radius:14px; background: var(--cardbg2)}
+.table.cal .cal-item .title{font-weight:800}
+.table.cal .cal-item.done{opacity:.70}
+.table.cal .cal-item.done .title{text-decoration:line-through}
+.right{text-align:right}
+.list{margin:0; padding-left:18px}
+.field label{display:block; font-size:12px; color:var(--muted); margin-bottom:6px}
+input, select, textarea{
+  width:100%;
+  background: var(--inputbg);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:10px 12px;
+  color: var(--text);
+  outline:none;
+}
+textarea{resize:vertical}
+.grid2{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+.filters{margin-top:12px}
+.modal{
+  position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:20px;
+}
+.modal-backdrop{position:absolute; inset:0; background: rgba(0,0,0,.55)}
+.modal-card{
+  position:relative;
+  width:min(760px, 95vw);
+  background: rgba(17,24,39,.96);
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow: var(--shadow);
+  padding:16px;
+}
+.modal-title{font-weight:900; font-size:16px}
+.flash{margin-top:12px; padding:10px 12px; border-radius:14px; border:1px solid rgba(74,222,128,.25); background: rgba(74,222,128,.08)}
+.thread{display:flex; flex-direction:column; gap:10px}
+.bubble{max-width:78%; padding:12px 12px; border-radius:16px; border:1px solid var(--line); background: var(--cardbg2)}
+.bubble.out{margin-left:auto; border-color: rgba(22,163,74,.28); background: rgba(22,163,74,.12)}
+.bubble.in{margin-right:auto}
+html[data-theme="light"] .bubble.out{background: rgba(22,163,74,.10)}
+@media (max-width: 980px){
+  .grid{grid-template-columns: 1fr}
+  .kpis-5{grid-template-columns: repeat(2, minmax(0, 1fr))}
+  .kpis-3{grid-template-columns: repeat(1, minmax(0, 1fr))}
+  .grid2{grid-template-columns: 1fr}
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <img class="logo-img" src="/static/logo.svg" alt="{{app_name}}" />
+        <div>
+          <h1>{{app_name}} — Client Portal</h1>
+          <div class="muted small">Tenant <span class="pill">{{tenant_id}}</span> • Logged in as <b>{{username}}</b></div>
+        </div>
+      </div>
+      <div class="row wrap">
+        <a class="btn btn-ghost" href="/client/logout">Logout</a>
+      </div>
+    </div>
+
+    {{flash_block}}
+
+    <div class="grid">
+      <div class="sidebar">
+        <div class="muted small">Navigation</div>
+        <div class="spacer"></div>
+        <div class="nav">
+          <a class="{{nav_notifications}}" href="/client?tenant={{tenant_id}}&tab=notifications">🔔 {{lbl_notifications}}</a>
+          <a class="{{nav_messages}}" href="/client?tenant={{tenant_id}}&tab=messages">💬 {{lbl_messages}}</a>
+          <a class="{{nav_leads}}" href="/client?tenant={{tenant_id}}&tab=leads">📥 {{lbl_leads}}</a>
+          <a class="{{nav_calendar}}" href="/client?tenant={{tenant_id}}&tab=calendar">📅 {{lbl_calendar}}</a>
+          <a class="{{nav_clients}}" href="/client?tenant={{tenant_id}}&tab=clients">👥 {{lbl_clients}}</a>
+          <a class="{{nav_pnl}}" href="/client?tenant={{tenant_id}}&tab=pnl">💰 {{lbl_pnl}}</a>
+          <a class="{{nav_assets}}" href="/client?tenant={{tenant_id}}&tab=assets">🚚 {{lbl_assets}}</a>
+          <a class="{{nav_settings}}" href="/client?tenant={{tenant_id}}&tab=settings">⚙️ {{lbl_settings}}</a>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="card mini">
+          <div class="muted small">Quick actions</div>
+          <div class="spacer"></div>
+          <a class="btn" href="/client?tenant={{tenant_id}}&tab=leads&modal=new_lead">New Lead</a>
+          <div class="spacer"></div>
+          <a class="btn btn-ghost" href="/client?tenant={{tenant_id}}&tab=calendar&modal=new_event">New Event</a>
+          <div class="spacer"></div>
+          <a class="btn btn-ghost" href="/client?tenant={{tenant_id}}&tab=assets&modal=new_truck">New Truck</a>
+        </div>
+      </div>
+
+      <div class="main">
+        {{tab_content}}
+      </div>
+    </div>
+
+    {{modal_html}}
+  </div>
+</body>
+</html>

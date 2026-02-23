@@ -1,0 +1,30 @@
+<div class='card'>
+          <h2>Settings</h2>
+          <div class='muted'>Theme, language, password, embedded intake form code.</div>
+          <div class='spacer'></div>
+
+          <h3>Preferences</h3>
+          <div class='row wrap'>
+            <a class='btn btn-ghost' href='{html.escape(toggle_theme_url)}'>{html.escape(toggle_theme_label)}</a>
+            <a class='btn btn-ghost' href='{html.escape(toggle_lang_url)}'>{html.escape(toggle_lang_label)}</a>
+          </div>
+
+          <div class='spacer'></div>
+          <h3>Change Password</h3>
+          {{pwd_form}}
+
+          <div class='spacer'></div>
+          <h3>Embedded Moving Intake Form</h3>
+          <div class='muted'>Use this code on your website to embed the no‑JS intake form (iframe). Submissions go directly into your tenant CRM.</div>
+          <div class='spacer'></div>
+          <div class='card mini'>
+            <div class='muted small'>Copy/paste:</div>
+            <textarea rows='5' readonly>{{form_code}}</textarea>
+          </div>
+          <div class='spacer'></div>
+          <div class='card mini'>
+            <div class='muted small'>Preview:</div>
+            <div class='spacer'></div>
+            <iframe src='{{embed_url}}' style='width:100%;height:720px;border:0;border-radius:16px; background:transparent'></iframe>
+          </div>
+        </div>

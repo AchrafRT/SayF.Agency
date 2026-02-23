@@ -1,0 +1,26 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Trucks &amp; Employees</h2>
+              <div class="muted">Add / modify / delete assets. (No JS, deterministic.)</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/client?tenant={urllib.parse.quote(tid)}&tab=assets&modal=new_truck">New Truck</a>
+              <a class="btn btn-ghost" href="/client?tenant={urllib.parse.quote(tid)}&tab=assets&modal=new_employee">New Employee</a>
+            </div>
+          </div>
+
+          <div class="spacer"></div>
+          <h3>Trucks</h3>
+          <table class="table">
+            <thead><tr><th>ID</th><th>Truck</th><th>Year</th><th>Cons.</th><th>Gas Assumption</th><th class="right">Actions</th></tr></thead>
+            <tbody>{{truck_rows}}</tbody>
+          </table>
+
+          <div class="spacer"></div>
+          <h3>Employees</h3>
+          <table class="table">
+            <thead><tr><th>ID</th><th>Name</th><th>Role</th><th>Phone</th><th class="right">Actions</th></tr></thead>
+            <tbody>{{emp_rows}}</tbody>
+          </table>
+        </div>

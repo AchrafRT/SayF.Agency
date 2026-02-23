@@ -1,0 +1,16 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Clients</h2>
+              <div class="muted">Search and open client records.</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/client?tenant={urllib.parse.quote(tid)}&tab=clients&modal=new_client">New Client</a>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <table class="table">
+            <thead><tr><th>ID</th><th>Name</th><th>Jobs</th><th class="right">Open</th></tr></thead>
+            <tbody>{{client_rows}}</tbody>
+          </table>
+        </div>

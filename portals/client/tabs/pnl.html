@@ -1,0 +1,42 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Real‑Time P&amp;L</h2>
+              <div class="muted">Filter by truck / employee.</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/client?tenant={urllib.parse.quote(tid)}&tab=pnl&modal=new_pnl">Add Entry</a>
+            </div>
+          </div>
+
+          <form class="filters" method="GET" action="/client">
+            <input type="hidden" name="tenant" value="{html.escape(tid)}"/>
+            <input type="hidden" name="tab" value="pnl"/>
+            <div class="row wrap">
+              <div class="field">
+                <label>Trucks</label>
+                <select name="truck">{{truck_opts}}</select>
+              </div>
+              <div class="field">
+                <label>Employees</label>
+                <select name="emp">{{emp_opts}}</select>
+              </div>
+              <div class="field">
+                <label>&nbsp;</label>
+                <button class="btn" type="submit">Apply</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="kpis kpis-3">
+            <div class="kpi"><div class="kpi-num">${revenue:,.2f}</div><div class="kpi-label">Revenue</div></div>
+            <div class="kpi"><div class="kpi-num">${expense:,.2f}</div><div class="kpi-label">Expenses</div></div>
+            <div class="kpi"><div class="kpi-num">${profit:,.2f}</div><div class="kpi-label">Profit</div></div>
+          </div>
+
+          <div class="spacer"></div>
+          <table class="table">
+            <thead><tr><th>Date</th><th>Note</th><th class="right">Amount</th></tr></thead>
+            <tbody>{{entry_rows}}</tbody>
+          </table>
+        </div>

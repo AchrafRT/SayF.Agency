@@ -1,0 +1,22 @@
+{
+  "Q0001": {
+    "id": "Q0001",
+    "client_id": "C0001",
+    "created_at": "2026-02-17T20:54:58",
+    "status": "sent",
+    "items": [
+      {
+        "label": "Year plan",
+        "qty": 1,
+        "unit": 981.0
+      },
+      {
+        "label": "Cards + Flyers",
+        "qty": 1,
+        "unit": 0.0
+      }
+    ],
+    "total": 981.0,
+    "note": "Year plan + onboarding"
+  }
+}

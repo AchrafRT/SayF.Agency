@@ -1,0 +1,27 @@
+{
+  "E0001": {
+    "id": "E0001",
+    "date": "2026-02-16",
+    "time": "10:00",
+    "type": "call",
+    "title": "$99 consult \u2014 CH Bor\u00e9al",
+    "desc": "27-min consult",
+    "related": {
+      "lead_id": "L0001"
+    },
+    "completed": false
+  },
+  "E0002": {
+    "id": "E0002",
+    "date": "2026-02-18",
+    "time": "14:00",
+    "type": "onboarding",
+    "title": "Onboarding \u2014 UltraTek",
+    "desc": "Setup + training",
+    "related": {
+      "client_id": "C0001",
+      "job_id": "J0001"
+    },
+    "completed": false
+  }
+}

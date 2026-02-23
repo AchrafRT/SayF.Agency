@@ -1,0 +1,13 @@
+{
+  "threads": {},
+  "messages": [
+    {
+      "id": "EM1",
+      "client_id": "C0001",
+      "subject": "Welcome + onboarding",
+      "body": "Welcome. Confirming onboarding Feb 18 14:00.",
+      "direction": "out",
+      "ts": "2026-02-15T10:00:00"
+    }
+  ]
+}

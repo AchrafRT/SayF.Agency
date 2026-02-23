@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "date": "2026-02-15",
+      "type": "revenue",
+      "amount": 299,
+      "note": "Deposit received"
+    },
+    {
+      "date": "2026-02-15",
+      "type": "expense",
+      "amount": 60,
+      "note": "Fuel estimate"
+    }
+  ]
+}

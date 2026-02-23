@@ -1,0 +1,16 @@
+<div class='card'>
+          <div class='row between'>
+            <div>
+              <h2>Employees</h2>
+              <div class='muted'>Internal team for the selected tenant (use this for your agency).</div>
+            </div>
+            <div class='row'>
+              <a class='btn' href='/admin?tenant={urllib.parse.quote(sel)}&tab=employees&modal=new_employee'>Add Employee</a>
+            </div>
+          </div>
+          <div class='spacer'></div>
+          <table class='table'>
+            <thead><tr><th>ID</th><th>Name</th><th>Contact</th><th>Status</th><th class='right'>Action</th></tr></thead>
+            <tbody>{{rows}}</tbody>
+          </table>
+        </div>

@@ -1,0 +1,33 @@
+{
+  "E0001": {
+    "id": "E0001",
+    "type": "call",
+    "title": "Call lead: Jean Dupont",
+    "date": "2026-02-17",
+    "time": "10:30",
+    "related": {
+      "lead_id": "L0002"
+    }
+  },
+  "E0002": {
+    "id": "E0002",
+    "type": "job",
+    "title": "Move: Sophie Nguyen",
+    "date": "2026-02-17",
+    "time": "13:00",
+    "related": {
+      "client_id": "C0001",
+      "job_id": "J0001"
+    }
+  },
+  "E0003": {
+    "id": "E0003",
+    "type": "followup",
+    "title": "Follow-up: Marie Tremblay quote",
+    "date": "2026-02-17",
+    "time": "16:30",
+    "related": {
+      "lead_id": "L0001"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "L0001": {
+    "id": "L0001",
+    "created_at": "2026-02-17T20:54:58",
+    "status": "new",
+    "name": "Marie Tremblay",
+    "phone": "514-555-0188",
+    "email": "marie@example.com",
+    "from_address": "Plateau-Mont-Royal, Montreal",
+    "to_address": "Laval (Chomedey)",
+    "move_date": "2026-02-17",
+    "notes": "Needs packing help. Elevator available. Wants quote today.",
+    "source": "website",
+    "value_est": 1299.0
+  },
+  "L0002": {
+    "id": "L0002",
+    "created_at": "2026-02-17T20:54:58",
+    "status": "followup",
+    "name": "Jean Dupont",
+    "phone": "438-555-0142",
+    "email": "jean@example.com",
+    "from_address": "Longueuil",
+    "to_address": "Brossard",
+    "move_date": "2026-02-17",
+    "notes": "Small move (studio). Price-sensitive.",
+    "source": "email",
+    "value_est": 499.0
+  }
+}

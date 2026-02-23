@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "date": "2026-02-15",
+      "type": "revenue",
+      "amount": 99,
+      "note": "Consultation booked"
+    },
+    {
+      "date": "2026-02-15",
+      "type": "expense",
+      "amount": 15,
+      "note": "Tools"
+    }
+  ]
+}

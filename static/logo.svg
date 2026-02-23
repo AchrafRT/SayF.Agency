@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Simple placeholder logo for SayF.Agency.  This file prevents 404 errors
+     when the UI requests /static/logo.svg.  Feel free to replace with your
+     actual company logo. -->
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="#2D2D2D" rx="8" ry="8"/>
+  <text x="32" y="38" font-size="24" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif">SF</text>
+</svg>

@@ -1,0 +1,16 @@
+<div class="card">
+          <div class="row between">
+            <div>
+              <h2>Leads</h2>
+              <div class="muted">Inbound lead list.</div>
+            </div>
+            <div class="row">
+              <a class="btn" href="/client?tenant={urllib.parse.quote(tid)}&tab=leads&modal=new_lead">New Lead</a>
+            </div>
+          </div>
+          <div class="spacer"></div>
+          <table class="table">
+            <thead><tr><th>ID</th><th>Name</th><th>Phone</th><th>Status</th><th>Move date</th><th>Value</th><th class="right">Actions</th></tr></thead>
+            <tbody>{{lead_rows}}</tbody>
+          </table>
+        </div>

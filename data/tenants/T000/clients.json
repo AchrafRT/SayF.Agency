@@ -1,0 +1,16 @@
+{
+  "C0001": {
+    "id": "C0001",
+    "name": "UltraTek",
+    "phone": "514-555-1111",
+    "email": "ops@ultratek.ca",
+    "status": "onboarding"
+  },
+  "C0002": {
+    "id": "C0002",
+    "name": "Multiconfort FP",
+    "phone": "514-555-1212",
+    "email": "info@multiconfortfp.ca",
+    "status": "active"
+  }
+}
